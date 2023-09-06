@@ -538,7 +538,7 @@
                     },
                     {
                         "condition": "[and(equals(parameters('enableAzBastion'), 'Yes'), not(empty(parameters('subnetMaskForAzBastion'))))]",
-                        "apiVersion": "2020-05-01",
+                        "apiVersion": "2020-11-01",
                         "type": "Microsoft.Network/bastionHosts",
                         "name": "[variables('azBastionName')]",
                         "location": "[parameters('location')]",
@@ -551,11 +551,6 @@
                         ],
                         "properties": {
                             "scaleUnits": 2,
-                            "enableTunneling": false,
-                            "enableIpConnect": false,
-                            "disableCopyPaste": false,
-                            "enableShareableLink": false,
-                            "enableKerberos": false,
                             "ipConfigurations": [
                                 {
                                     "name": "[variables('azBastionIpName')]",
