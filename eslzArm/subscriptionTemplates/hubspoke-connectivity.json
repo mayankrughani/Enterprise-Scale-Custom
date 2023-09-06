@@ -46,6 +46,17 @@
                 "description": "Select whether the Azure Firewall should be deployed or not."
             }
         },
+        "enableAzBastion": {
+            "type": "string",
+            "allowedValues": [
+                "Yes",
+                "No"
+            ],
+            "defaultValue": "No",
+            "metadata": {
+                "description": "Select whether the Azure Bastion should be deployed or not."
+            }
+        },
         "enableAzFwDnsProxy": {
             "type": "string",
             "allowedValues": [
@@ -102,6 +113,13 @@
             "defaultValue": "",
             "metadata": {
                 "description": "Provide subnet for Azure Firewall."
+            }
+        },
+        "subnetMaskForAzBastion": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "Provide subnet for Azure Bastion."
             }
         },
         "subnetMaskForAzFwMgmt": {
