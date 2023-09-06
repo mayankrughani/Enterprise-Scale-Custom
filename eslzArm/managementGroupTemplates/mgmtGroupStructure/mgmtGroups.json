@@ -83,7 +83,7 @@
                 }
             }
         },
-        {
+        /*{
             // Create management group for sandbox subscriptions
             "type": "Microsoft.Management/managementGroups",
             "apiVersion": "2020-05-01",
@@ -118,7 +118,7 @@
                     }
                 }
             }
-        },        
+        },*/        
         {
             // Create child management groups for platform resources
             "condition": "[not(empty(parameters('platformMgs')))]",
