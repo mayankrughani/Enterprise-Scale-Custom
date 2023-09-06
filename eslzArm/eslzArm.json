@@ -1971,6 +1971,9 @@
                     "enableAzFw": {
                         "value": "[parameters('enableAzFw')]"
                     },
+                    "enableAzBastion": {
+                        "value": "[parameters('enableAzBastion')]"
+                    },
                     "addressPrefix": {
                         "value": "[parameters('addressPrefix')]"
                     },
@@ -2138,6 +2141,9 @@
                     },
                     "enableAzFw": {
                         "value": "[parameters('enableAzFw')]"
+                    },
+                    "enableAzBastion": {
+                        "value": "[parameters('enableAzBastion')]"
                     },
                     "firewallSku": {
                         "value": "[parameters('firewallSku')]"
