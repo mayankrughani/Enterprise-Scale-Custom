@@ -82,6 +82,13 @@
                 "description": "Provide subnet for Azure Firewall."
             }
         },
+        "subnetMaskForAzBastion": {
+            "type": "string",
+            "defaultValue": "",
+            "metadata": {
+                "description": "Provide subnet for Azure Bastion."
+            }
+        },
         "subnetMaskForGw": {
             "type": "string",
             "defaultValue": "",
@@ -146,6 +153,14 @@
                 }
             }
         ],
+        "bastionSubnet": [
+            {
+                "name": "AzureBastionSubnet",
+                "properties": {
+                    "addressPrefix": "[parameters('subnetMaskForAzBastion')]"
+                }
+            }
+        ],
         "ddosProtectionPlanId": {
             "id": "[parameters('ddosPlanResourceId')]"
         }
@@ -206,7 +221,10 @@
                                                                           empty(parameters('subnetMaskForGw'))), variables('gwSubnet'), json('[]')), 
                                                                           if(
                                                                               not(
-                                                                                  empty(parameters('subnetMaskForAzFw'))), variables('fwSubnet'), json('[]')))]",
+                                                                                  empty(parameters('subnetMaskForAzFw'))), variables('fwSubnet'), json('[]')),
+                                                                                  if(
+                                                                                    not(
+                                                                                      empty(parameters('subnetMaskForAzBastion'))), variables('bastionSubnet'), json('[]')))]",
                                                 "enableDdosProtection": "[if(equals(parameters('enableDdoS'), 'Yes'), 'true', 'false')]",
                                                 "ddosProtectionPlan": "[if(equals(parameters('enableDdoS'), 'Yes'), variables('ddosProtectionPlanId'), json('null'))]"
                                             }
