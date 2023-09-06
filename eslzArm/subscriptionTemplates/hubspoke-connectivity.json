@@ -569,15 +569,13 @@
                             "enableKerberos": false,
                             "ipConfigurations": [
                                 {
-                                    "azBastionIpConfig": {
-                                        "name": "[variables('azBastionIpName')]",
-                                        "properties": {
-                                            "subnet": {
-                                                "id": "[variables('azBastionSubnetId')]"
-                                            },
-                                            "publicIPAddress": {
-                                                "id": "[variables('azBastionPipId')]"
-                                            }
+                                    "name": "[variables('azBastionIpName')]",
+                                    "properties": {
+                                        "subnet": {
+                                            "id": "[variables('azBastionSubnetId')]"
+                                        },
+                                        "publicIPAddress": {
+                                            "id": "[variables('azBastionPipId')]"
                                         }
                                     }
                                 }
