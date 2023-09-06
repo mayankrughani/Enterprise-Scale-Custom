@@ -3393,7 +3393,7 @@
                         "value": "[variables('platformRgNames').lzVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[take(concat(variables('platformResourceNames').lzVnet, '-', parameters('corpConnectedLzSubscriptionId')[copyIndex()].subs), 64)]"
+                        "value": "[take(variables('platformResourceNames').lzVnet, 64)]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('connectivityLocation')]"
