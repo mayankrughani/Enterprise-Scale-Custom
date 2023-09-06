@@ -1,3 +1,5 @@
+
+
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-08-01/tenantDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
@@ -388,6 +390,18 @@
             "defaultValue": ""
         },
         "subnetMaskForAzFwMgmt": {
+            "type": "string",
+            "defaultValue": ""
+        },
+        "enableAzBastion": {
+            "type": "string",
+            "allowedValues": [
+                "Yes",
+                "No"
+            ],
+            "defaultValue": "No"
+        },
+        "subnetMaskForAzBastion": {
             "type": "string",
             "defaultValue": ""
         },
@@ -1977,6 +1991,9 @@
                     },
                     "subnetMaskForAzFw": {
                         "value": "[parameters('subnetMaskForAzFw')]"
+                    },
+                    "subnetMaskForAzBastion": {
+                        "value": "[parameters('subnetMaskForAzBastion')]"
                     },
                     "subnetMaskForAzFwMgmt": {
                         "value": "[parameters('subnetMaskForAzFwMgmt')]"
@@ -3864,6 +3881,9 @@
                     "enableAzFw": {
                         "value": "[parameters('enableAzFw')]"
                     },
+                    "enableAzBastion": {
+                        "value": "[parameters('enableAzBastion')]"
+                    },
                     "addressPrefix": {
                         "value": "[parameters('addressPrefix')]"
                     },
@@ -3884,6 +3904,9 @@
                     },
                     "subnetMaskForAzFw": {
                         "value": "[parameters('subnetMaskForAzFw')]"
+                    },
+                    "subnetMaskForAzBastion": {
+                        "value": "[parameters('subnetMaskForAzBastion')]"
                     },
                     "subnetMaskForAzFwMgmt": {
                         "value": "[parameters('subnetMaskForAzFwMgmt')]"
@@ -4032,6 +4055,9 @@
                     },
                     "enableAzFw": {
                         "value": "[parameters('enableAzFw')]"
+                    },
+                    "enableAzBastion": {
+                        "value": "[parameters('enableAzBastion')]"
                     },
                     "firewallSku": {
                         "value": "[parameters('firewallSku')]"
