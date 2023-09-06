@@ -3183,7 +3183,7 @@
                         "value": "[variables('platformRgNames').identityVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[take(concat(variables('platformResourceNames').identityVnet, '-', uniqueString(parameters('identitySubscriptionId'))), 64)]"
+                        "value": "[take(variables('platformResourceNames').identityVnet , 64)]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('connectivityLocation')]"
@@ -3230,7 +3230,7 @@
                         "value": "[variables('platformRgNames').identityVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[take(concat(variables('platformResourceNames').identityVnet, '-', uniqueString(parameters('identitySubscriptionId'))), 64)]"
+                        "value": "[take(variables('platformResourceNames').identityVnet , 64)]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('connectivityLocation')]"
