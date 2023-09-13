@@ -2682,6 +2682,20 @@
                                                         ]
                                                     }
                                                 }
+                                            },
+                                            {
+                                                "id": "suffixes",
+                                                "header": "Virtual Network suffix",
+                                                "width": "1fr",
+                                                "element": {
+                                                    "type": "Microsoft.Common.TextBox",
+                                                    "placeholder": "Ensure there are no duplicate suffixes!",
+                                                    "constraints": {
+                                                        "required": true,
+                                                        "validations": [
+                                                        ]
+                                                    }
+                                                }
                                             }
                                         ]
                                     }
