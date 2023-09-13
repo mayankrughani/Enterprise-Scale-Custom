@@ -130,7 +130,7 @@
               {
                 "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
                 "apiVersion": "2020-05-01",
-                "name": "[concat(parameters('vNetName'), '-', substring(uniqueString(subscription().id),0,6), '/peerToHub')]",
+                "name": "[concat(parameters('vNetName'), '/peerToHub')]",
                 "dependsOn": [
                   "[parameters('vNetName')]"
                 ],
@@ -183,7 +183,7 @@
                     "resources": [
                       {
                         "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
-                        "name": "[[concat(parameters('hubName'),'/',last(split(parameters('remoteVirtualNetwork'),'/')), '-', substring(uniqueString(subscription().id),0,6))]",
+                        "name": "[[concat(parameters('hubName'),'/',last(split(parameters('remoteVirtualNetwork'),'/')))]",
                         "apiVersion": "2020-05-01",
                         "properties": {
                           "allowVirtualNetworkAccess": true,
