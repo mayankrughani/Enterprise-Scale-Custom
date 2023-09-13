@@ -130,7 +130,7 @@
               {
                 "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
                 "apiVersion": "2020-05-01",
-                "name": "[concat(parameters('vNetName'), '/peerToHub')]",
+                "name": "[concat(parameters('vNetName'), '-', substring(uniqueString(subscription().id),0,6), '/peerToHub')]",
                 "dependsOn": [
                   "[parameters('vNetName')]"
                 ],
