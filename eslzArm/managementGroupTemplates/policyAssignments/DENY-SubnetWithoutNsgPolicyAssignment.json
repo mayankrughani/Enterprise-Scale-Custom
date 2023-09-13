@@ -52,7 +52,9 @@
                     }
                 ],
                 "parameters": {
-                    "excludedSubnets": ["GatewaySubnet","AzureFirewallSubnet","AzureFirewallManagementSubnet","AzureBastionSubnet"]
+                    "excludedSubnets": {
+                        "value": ["GatewaySubnet","AzureFirewallSubnet","AzureFirewallManagementSubnet","AzureBastionSubnet"]
+                    }
                 }
             }
         }        
