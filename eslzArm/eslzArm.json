@@ -3189,7 +3189,7 @@
                         "value": "[variables('platformRgNames').identityVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[take(variables('platformResourceNames').identityVnet , 64)]"
+                        "value": "[take(concat(variables('platformResourceNames').identityVnet, '-', uniqueString(parameters('identitySubscriptionId'))), 64)]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('connectivityLocation')]"
@@ -3236,7 +3236,7 @@
                         "value": "[variables('platformRgNames').identityVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[take(variables('platformResourceNames').identityVnet , 64)]"
+                        "value": "[take(concat(variables('platformResourceNames').identityVnet, '-', uniqueString(parameters('identitySubscriptionId'))), 64)]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('connectivityLocation')]"
@@ -3399,7 +3399,7 @@
                         "value": "[variables('platformRgNames').lzVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[take(variables('platformResourceNames').lzVnet, 64)]"
+                        "value": "[take(concat(variables('platformResourceNames').lzVnet, '-', parameters('corpConnectedLzSubscriptionId')[copyIndex()].sufixes), 64)]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('connectivityLocation')]"
@@ -3456,7 +3456,7 @@
                         "value": "[variables('platformRgNames').lzVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[take(concat(variables('platformResourceNames').lzVnet, '-', parameters('corpConnectedLzSubscriptionId')[copyIndex()].subs), 64)]"
+                        "value": "[take(concat(variables('platformResourceNames').lzVnet, '-', parameters('corpConnectedLzSubscriptionId')[copyIndex()].suffixes), 64)]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('connectivityLocation')]"
