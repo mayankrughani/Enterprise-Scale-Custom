@@ -50,7 +50,10 @@
                     {
                         "message": "[replace(variables('nonComplianceMessage').message, parameters('nonComplianceMessagePlaceholder'), variables('nonComplianceMessage')[parameters('enforcementMode')])]"
                     }
-                ]
+                ],
+                "parameters": {
+                    "excludedSubnets": ["GatewaySubnet","AzureFirewallSubnet","AzureFirewallManagementSubnet","AzureBastionSubnet"]
+                }
             }
         }        
     ],
