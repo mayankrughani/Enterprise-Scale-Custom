@@ -756,8 +756,9 @@
             "identity": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'identity')]",*/
             "lzs": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'landingzones')]",
             "corp": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'corp')]",
-            "online": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'online')]",
-            /*"decommissioned": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'decommissioned')]",
+            "online": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'online')]"
+            /*,
+            "decommissioned": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'decommissioned')]",
             "sandboxes": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'sandboxes')]"*/
         },
         "copy": [
