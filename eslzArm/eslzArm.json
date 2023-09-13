@@ -751,14 +751,14 @@
         "mgmtGroups": {
             "eslzRoot": "[parameters('enterpriseScaleCompanyPrefix')]",
             "platform": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'platform')]",
-            "management": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'management')]",
+            /*"management": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'management')]",
             "connectivity": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'connectivity')]",
-            "identity": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'identity')]",
+            "identity": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'identity')]",*/
             "lzs": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'landingzones')]",
             "corp": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'corp')]",
             "online": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'online')]",
-            "decommissioned": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'decommissioned')]",
-            "sandboxes": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'sandboxes')]"
+            /*"decommissioned": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'decommissioned')]",
+            "sandboxes": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'sandboxes')]"*/
         },
         "copy": [
             {
@@ -2994,7 +2994,7 @@
                 }
             }
         },
-        {
+        /*{
             // Assigning decommissioned initiative to decommissioned management group if condition is true
             "condition": "[or(equals(parameters('enableDecommissioned'), 'Yes'), equals(parameters('enableDecommissioned'), 'Audit'))]",
             "type": "Microsoft.Resources/deployments",
@@ -3047,7 +3047,7 @@
                     }
                 }
             }
-        },
+        },*/
         /*
             The following section will optionally configure the governance for the Identity management group for the platform
         */
