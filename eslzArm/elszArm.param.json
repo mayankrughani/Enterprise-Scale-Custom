@@ -171,10 +171,10 @@
             "value": "10.100.1.0/26"
         },
         "enableAzBastion": {
-            "value": "Yes"
+            "value": "No"
         },
         "subnetMaskForAzBastion": {
-            "value": "10.100.2.0/26"
+            "value": ""
         },
         "identitySubscriptionId": {
             "value": ""
@@ -198,11 +198,13 @@
             "value": [
                 {
                     "subs": "84f3f427-593e-4485-b7ee-6fa0eccc3994",
-                    "addresses": "10.101.0.0/16"
+                    "addresses": "10.101.0.0/16",
+                    "suffixes": "nonprod"
                 },
                 {
                     "subs": "4b6d5ad6-49e6-4a0b-9f36-5deb25aa0533",
-                    "addresses": "10.102.0.0/16"
+                    "addresses": "10.102.0.0/16",
+                    "suffixes": "prod"
                 }
             ]
         },
@@ -270,13 +272,13 @@
             "value": "Yes"
         },
         "enableDecommissioned": {
-            "value": "Yes"
+            "value": "No"
         },
         "enableSandbox": {
-            "value": "Yes"
+            "value": "No"
         },
         "enableSqlAudit": {
-            "value": "Yes"
+            "value": "No"
         },
         "enableStorageHttps": {
             "value": "Yes"
