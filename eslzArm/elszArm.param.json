@@ -171,10 +171,10 @@
             "value": "10.100.1.0/26"
         },
         "enableAzBastion": {
-            "value": "No"
+            "value": "Yes"
         },
         "subnetMaskForAzBastion": {
-            "value": ""
+            "value": "10.100.2.0/26"
         },
         "identitySubscriptionId": {
             "value": ""
@@ -270,10 +270,10 @@
             "value": "Yes"
         },
         "enableDecommissioned": {
-            "value": "No"
+            "value": "Yes"
         },
         "enableSandbox": {
-            "value": "No"
+            "value": "Yes"
         },
         "enableSqlAudit": {
             "value": "Yes"
