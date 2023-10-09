@@ -772,7 +772,7 @@
             "platform": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'platform')]",
             "lzs": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'landingzones')]",
             "corp": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'corp')]",
-            "online": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'online')]",
+            "online": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'online')]"
         },
         "copy": [
             {
